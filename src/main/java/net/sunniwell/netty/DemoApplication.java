@@ -19,6 +19,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
+		
+		SpringApplication.run(DemoApplication.class, args);
+		
 		EventLoopGroup bossGroup = new NioEventLoopGroup();
 		EventLoopGroup workGroup = new NioEventLoopGroup();
 		try {
@@ -35,7 +38,6 @@ public class DemoApplication {
 			//退出程序
 			bossGroup.shutdownGracefully();
 			workGroup.shutdownGracefully();
-		}
-//		SpringApplication.run(DemoApplication.class, args);
+		}		
 	}
 }
